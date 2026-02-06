@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { LinkIcon, StarButton } from "@/components/ui";
+import { LinkIcon } from "@/components/ui";
 import type { PexelsPhoto } from "@/types";
+import { StarButton } from "./StarButton";
 
 interface PhotoCardProps {
   photo: PexelsPhoto;

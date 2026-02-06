@@ -1,17 +1,17 @@
 "use client";
 
 import { Star } from "lucide-react";
-import { useState } from "react";
-
+import { useLikes } from "@/contexts/LikesContext";
 interface StarButtonProps {
   photoId: number;
 }
 
 export function StarButton({ photoId }: StarButtonProps) {
-  const [liked, setIsLiked] = useState(false);
+  const { isLiked, toggleLike } = useLikes();
+  const liked = isLiked(photoId);
   return (
     <button
-      onClick={() => setIsLiked((prev) => !prev)}
+      onClick={() => toggleLike(photoId)}
       className="p-1 hover:scale-110 transition-transform"
     >
       <Star
