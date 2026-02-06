@@ -1,8 +1,13 @@
-import { Logo } from "@/components/ui";
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Logo size="lg" />
-    </div>
-  );
+import { redirect } from "next/navigation";
+import { getAuthenticatedUser } from "@/lib/auth";
+import { ROUTES } from "@/constants";
+
+export default async function HomePage() {
+  const user = await getAuthenticatedUser();
+
+  if (user) {
+    redirect(ROUTES.PHOTOS);
+  } else {
+    redirect(ROUTES.LOGIN);
+  }
 }
