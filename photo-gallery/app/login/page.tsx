@@ -15,7 +15,7 @@ export default async function LoginPage() {
       <div className="w-full max-w-md space-y-8">
         <div className="flex flex-col items-center">
           <Logo size="lg" />
-          <h1 className="mt-6 text-heading-1 text-gray-900">
+          <h1 className="mt-6 pb-6 text-heading-1 text-gray-900">
             Sign in to your account
           </h1>
         </div>

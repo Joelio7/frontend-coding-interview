@@ -3,6 +3,7 @@
 import { useState, type SyntheticEvent } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Input, Button } from "@/components/ui";
+import Link from "next/link";
 
 export function LoginForm() {
   const { login, isLoading: authLoading } = useAuth();
@@ -56,13 +57,13 @@ export function LoginForm() {
         disabled={isLoading}
         autoComplete="current-password"
         rightElement={
-          <a
+          <Link
             href="#"
             className="text-brand-blue text-body hover:underline"
             onClick={(e) => e.preventDefault()}
           >
             Forgot password?
-          </a>
+          </Link>
         }
       />
 
