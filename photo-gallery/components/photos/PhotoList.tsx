@@ -15,7 +15,7 @@ export function PhotoList({ photos }: PhotoListProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3">
       {photos.map((photo) => (
         <PhotoCard key={photo.id} photo={photo} />
       ))}
