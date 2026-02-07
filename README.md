@@ -4,15 +4,30 @@ A photo gallery app built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Quick Start
 
+1. Navigate to the project directory:
+
 ```bash
 cd photo-gallery
+```
+
+2. Copy the environment file and add your Pexels API key:
+
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` and set `PEXELS_API_KEY=your_key_here`
+
+3. Install dependencies and run the development server:
+
+```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-> **Note:** The Pexels API key is configured in the codebase per the interview instructions.
+Open [http://localhost:3000](http://localhost:3000)
 
 ## Usage
 
