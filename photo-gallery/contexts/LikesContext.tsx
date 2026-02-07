@@ -16,6 +16,7 @@ interface LikesContextValue {
   likedPhotos: Set<number>;
   isLiked: (photoId: number) => boolean;
   toggleLike: (photoId: number) => void;
+  clearLikes: () => void;
   likesCount: number;
 }
 
@@ -54,12 +55,17 @@ export function LikesProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const clearLikes = useCallback(() => {
+    setLikedPhotos(new Set());
+  }, []);
+
   return (
     <LikesContext.Provider
       value={{
         likedPhotos,
         isLiked,
         toggleLike,
+        clearLikes,
         likesCount: likedPhotos.size,
       }}
     >

@@ -3,13 +3,15 @@
 import { useState } from "react";
 import { LogOut } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-
+import { useLikes } from "@/contexts/LikesContext";
 export function LogoutButton() {
   const { logout } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const { clearLikes } = useLikes();
 
   const handleLogout = async () => {
     setIsLoading(true);
+    clearLikes();
     await logout();
   };
 
