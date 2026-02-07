@@ -34,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000)
 npm run test
 ```
 
-Includes unit test for storage utilities and component test for StarButton.
+Includes unit test for storage utilities and component test for PhotoCard.
 
 ## Production Improvements
 
